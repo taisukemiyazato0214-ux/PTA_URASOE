@@ -8,16 +8,45 @@
   <style>
     :root{--accent:#005bac;--light:#e8f0fb;--muted:#5a6470;--bg:#f9fbfd}
     *{box-sizing:border-box}
-    body{font-family:"Yu Gothic",Meiryo,"Hiragino Kaku Gothic ProN",sans-serif;margin:0;color:#111;background:var(--bg);}
-    .container{max-width:1000px;margin:0 auto;padding:24px}
-    header{background:linear-gradient(135deg,#fff 0%, var(--light) 100%);border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 6px 18px rgba(10,10,10,0.06)}
-    .title{display:flex;gap:16px;align-items:center}
-    .logo{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4fa3f7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
-    h1{margin:0;font-size:22px;color:var(--accent)}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ← 横スクロール防止 */
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px;
+  box-sizing: border-box;
+}header {
+  background: linear-gradient(135deg, #fff 0%, var(--light) 100%);
+  border-radius: 12px;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(10,10,10,0.06);
+  overflow-x: hidden; /* ← はみ出し防止 */
+}.title {
+  display: flex;          /* ← まずflexを指定 */
+  flex-wrap: wrap;        /* ← 折り返し許可 */
+  gap: 16px;
+  align-items: center;
+}    .logo{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4fa3f7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:15px;color:var(--accent)}
     p.lead{margin:8px 0 0;color:var(--muted)}
     .meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
-    .meta .card{background:#fff;padding:12px;border-radius:8px;box-shadow:0 4px 10px rgba(10,10,10,0.04);min-width:160px}
-    nav{display:flex;gap:12px;margin:18px 0;flex-wrap:wrap}
+.meta .card {
+  background: #fff;
+  padding: 6px 10px;      /* ← 内側の余白を小さく */
+  border-radius: 6px;     /* ← 角を少し丸く */
+  box-shadow: 0 2px 6px rgba(10,10,10,0.04);
+  font-size: 14px;        /* ← 文字サイズを小さく */
+  min-width: 120px;       /* ← カードの幅を縮小 */
+}    nav{display:flex;gap:12px;margin:18px 0;flex-wrap:wrap}
     nav a{padding:8px 12px;background:#fff;border-radius:8px;text-decoration:none;color:var(--accent);font-weight:600;box-shadow:0 3px 8px rgba(10,10,10,0.04)}
     nav a:hover{background:var(--accent);color:#fff;transition:0.2s}
     .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
@@ -40,9 +69,8 @@
           <h1>第二回 浦添市PTAコミュニティフェスタ</h1>
           <p class="lead"></p>
           <div class="meta">
-            <div class="card">日時：<strong>2025年11月24日（月・祝）11:00～16:00</strong></div>
-            <div class="card">会場：<strong>組踊公園・結の街</strong></div>
-            <div class="card">入場：<strong>無料</strong></div>
+            <div class="card">日時：<strong>2025年11月24日</strong></div>
+            <div class="card">会場：<strong>組踊公園</strong></div>
           </div>
         </div>
       </div>
@@ -57,32 +85,49 @@
     <div class="grid">
       <main>
 
+        <section id="about">
+                <ul class="all">
+
+          <h2>イベント概要</h2>
+          <p>「第二回浦添市PTAコミュニティフェスタ」は、地域・学校・家庭のつながりを深めるために開催される交流イベントです。エイサーや獅子舞、ダンス、リコーダー演奏など、多彩なステージパフォーマンスをお楽しみいただけます。さらに、人気のキッチンカーも出店予定！家族みんなで楽しい時間を過ごしましょう。</p>
+        </section>
+
+        <h2>出店・体験</h2>
+        <p>キッチンカーによる飲食販売や、子ども向け体験ブースなどを予定しています。</p>
+
+
 <section>
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_1.jpg" alt="第二回コミュニティフェスタ ポスター" width="600">
+  <img src="poster_1.jpg" alt="第二回コミュニティフェスタ ポスター" width="600">
 </section>
 
 
         <section id="program">
-          <h2>ステージプログラム</h2>
-          <ul class="schedule">
-            <li>11:00　開会あいさつ</li>
+
+          <h2 class="stage-title">🎤 ステージプログラム 🎶</h2>
+          <ul class="stage-list">
+            <li>11:00　開会式（実行委員）</li>
             <li>11:05　ダンスパフォーマンス（神森中学校）</li>
             <li>11:25　ダンスパフォーマンス（パステル学童クラブ）</li>
             <li>11:40　リコーダー演奏（宮城小学校）</li>
-            <li>12:30　ポスターコンテスト表彰</li>
+
             <li>13:00　ハンター</li>
             <li>13:15　講和</li>
             <li>13:40　じゃんけん大会</li>
             <li>14:00　獅子舞演舞（内間小学校）</li>
             <li>14:15　演舞、歌（港川小学校）</li>
             <li>14:30　エイサー演舞（内間小学校）</li>
-            <li>15:45　閉会式</li>
+            <li>15:45　閉会式（実行委員）</li>
           </ul>
           <p>※内容・時間は変更になる場合があります。</p>
+
+          <h2 class="stage-title">🚄 アクセス 🚙</h2>
+
+<link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
         </section>
 
         <section id="access">
-          <h2>アクセス</h2>
+        <ul class="all">
+
           <p>会場：組踊公園・結の街（浦添市）</p>
           <p>駐車場は台数に限りがあります。公共交通機関のご利用にご協力ください。</p>
           <div style="border-radius:8px;overflow:hidden;margin-top:8px">
@@ -91,6 +136,8 @@
         </section>
 
         <section id="notes">
+        <ul class="all">
+
           <h2>注意事項</h2>
           <ul>
             <li>ゴミは各自お持ち帰りください。</li>
@@ -106,32 +153,22 @@
 
         <h2>ポスターコンテストギャラリー</h2>
 <section>
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_1.jpg" alt="第二回コミュニティフェスタ ポスター1" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_2.jpg" alt="第二回コミュニティフェスタ ポスター2" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_3.jpg" alt="第二回コミュニティフェスタ ポスター3" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_4.jpg" alt="第二回コミュニティフェスタ ポスター4" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_5.jpg" alt="第二回コミュニティフェスタ ポスター5" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_6.jpg" alt="第二回コミュニティフェスタ ポスター6" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_7.jpg" alt="第二回コミュニティフェスタ ポスター7" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_8.jpg" alt="第二回コミュニティフェスタ ポスター8" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_9.jpg" alt="第二回コミュニティフェスタ ポスター9" width="170" class="clickable">
-  <img src="C:\Users\taisu\Desktop\PTA\image\poster_10.jpg" alt="第二回コミュニティフェスタ ポスター10" width="170" class="clickable">
+  <img src="poster_1.jpg" alt="第二回コミュニティフェスタ ポスター1" width="170" class="clickable">
+  <img src="poster_2.jpg" alt="第二回コミュニティフェスタ ポスター2" width="170" class="clickable">
+  <img src="poster_3.jpg" alt="第二回コミュニティフェスタ ポスター3" width="170" class="clickable">
+  <img src="poster_4.jpg" alt="第二回コミュニティフェスタ ポスター4" width="170" class="clickable">
+  <img src="poster_5.jpg" alt="第二回コミュニティフェスタ ポスター5" width="170" class="clickable">
+  <img src="poster_6.jpg" alt="第二回コミュニティフェスタ ポスター6" width="170" class="clickable">
+  <img src="poster_7.jpg" alt="第二回コミュニティフェスタ ポスター7" width="170" class="clickable">
+  <img src="poster_8.jpg" alt="第二回コミュニティフェスタ ポスター8" width="170" class="clickable">
+  <img src="poster_9.jpg" alt="第二回コミュニティフェスタ ポスター9" width="170" class="clickable">
+  <img src="poster_10.jpg" alt="第二回コミュニティフェスタ ポスター10" width="170" class="clickable">
 </section>
 
 
         </section>
       </main>
 
-      <aside>
-        <section id="about">
-          <h2>イベント概要</h2>
-          <p>「第二回浦添市PTAコミュニティフェスタ」は、地域・学校・家庭のつながりを深めるために開催される交流イベントです。エイサーや獅子舞、ダンス、リコーダー演奏など、多彩なステージパフォーマンスをお楽しみいただけます。さらに、人気のキッチンカーも出店予定！家族みんなで楽しい時間を過ごしましょう。</p>
-        </section>
-
-        <h2>出店・体験</h2>
-        <p>キッチンカーによる飲食販売や、子ども向け体験ブースなどを予定しています。</p>
-
-      </aside>
 
     </div>
 
@@ -210,5 +247,97 @@
     if (e.target === modal) modal.style.display = "none";
   };
 </script>
+<style>
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 12px;
+}
+
+  .stage-title {
+    font-family: "RocknRoll One", sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+    color: #e94e1b;
+    text-align: left; /* ← これでリスト全体を左寄せに */
+  }
+  .stage-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: left; /* ← これでリスト全体を左寄せに */
+  }
+  .all{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: left; /* ← これでリスト全体を左寄せに */
+  }
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 12px;
+  }
+  header {
+    padding: 10px;
+  }
+
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+  .logo {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+
+  h1 {
+    font-size: 16px;
+    white-space: normal; /* ← 改行を許可 */
+    line-height: 1.3;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+ .meta .card {
+    font-size: 13px;
+    padding: 4px 8px;
+    min-width: auto;
+    width: 100%;  /* ← 横幅いっぱいにして見やすく */
+  }
+}
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
+
+</style>
+
+
+
 </body>
 </html>
