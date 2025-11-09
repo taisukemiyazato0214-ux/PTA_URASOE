@@ -20,17 +20,16 @@ body {
   margin: 0 auto;
   padding: 12px;
   box-sizing: border-box;
-}header {
-  background: linear-gradient(135deg, #fff 0%, var(--light) 100%);
-  border-radius: 12px;
-  padding: 12px;
-  width: 100%;
-  max-width: 100%;
+}
+header {
+  width: 100%;          /* container内で横幅いっぱい */
+  padding: 12px;        /* containerのパディングと同じ */
   box-sizing: border-box;
   margin-bottom: 20px;
+  border-radius: 12px;  /* 角丸はそのまま */
   box-shadow: 0 6px 18px rgba(10,10,10,0.06);
-  overflow-x: hidden; /* ← はみ出し防止 */
-}.title {
+}
+.title {
   display: flex;          /* ← まずflexを指定 */
   flex-wrap: wrap;        /* ← 折り返し許可 */
   gap: 16px;
